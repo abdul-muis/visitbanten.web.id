@@ -1,0 +1,6 @@
+{
+  "name": "Dinas Pariwisata Provinsi Banten",
+  "description": "Portal resmi Dinas Pariwisata Provinsi Banten — destinasi wisata, religi, akomodasi, paket wisata, kalender event, ekraf, asisten AI Si Badak, dan panel admin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

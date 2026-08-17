@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinas Pariwisata Provinsi Banten — Exciting Banten</title>
+<meta name="description" content="Portal resmi Dinas Pariwisata Provinsi Banten. Destinasi, wisata religi, akomodasi, paket wisata, kalender event, produk ekonomi kreatif, dan Asisten Cerdas Si Badak AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-lang="id" data-theme="light" data-contrast="normal" data-fontscale="0">
+
+<div class="scroll-progress-bar" id="scrollProgressBar"></div>
+<a href="#main" class="skip-link">Langsung ke konten utama</a>
+
+<!-- ============ PUBLIC SITE ============ -->
+<div id="publicSite">
+
+<!-- Utility Top Bar -->
+<div class="utility-bar" id="utilityBar">
+  <div class="utility-inner">
+    <span class="coord-tag">06°02'S 105°53'E — PROVINSI BANTEN · EXCITING BANTEN</span>
+    <div class="utility-controls">
+      <!-- Accessibility Font & Contrast -->
+      <div class="a11y-toggle" role="group" aria-label="Aksesibilitas">
+        <button type="button" class="a11y-btn" data-action="font-dec" title="Perkecil Teks">A−</button>
+        <button type="button" class="a11y-btn" data-action="font-inc" title="Perbesar Teks">A+</button>
+        <button type="button" class="a11y-btn" data-action="contrast" title="Kontras Tinggi">◐ Kontras</button>
+      </div>
+
+      <!-- Theme Selector (Light, Dark, Sunset) -->
+      <div class="theme-toggle" role="group" aria-label="Pilih Tema">
+        <button type="button" class="theme-btn is-active" data-theme-btn="light" title="Mode Terang">☀️</button>
+        <button type="button" class="theme-btn" data-theme-btn="dark" title="Mode Gelap">🌙</button>
+        <button type="button" class="theme-btn" data-theme-btn="sunset" title="Mode Senja Banten">🌅</button>
+      </div>
+
+      <!-- Language Selector (ID, EN, SU) -->
+      <div class="lang-toggle" role="group" aria-label="Pilih Bahasa">
+        <button type="button" class="lang-btn is-active" data-lang-btn="id">ID</button>
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="su">SU</button>
+      </div>
+
+      <!-- Admin Entry -->
+      <button type="button" class="admin-entry" id="adminEntry" data-i18n="nav.admin">⚙ Admin</button>
+    </div>
+  </div>
+</div>
+
+<!-- Main Sticky Header -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="wordmark" aria-label="Kembali ke atas">
+      <img src="assets/logo/logo_ebe_small.png" alt="Logo Exciting Banten" class="wordmark-logo" id="siteLogoImg">
+      <div class="wordmark-text">
+        <span class="wordmark-title" id="siteTitleText">Dinas Pariwisata</span>
+        <span class="wordmark-sub" id="siteSubtitleText">Provinsi Banten</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#destinasi" data-i18n="nav.destinasi">Destinasi</a>
+      <a href="#religi" data-i18n="nav.religi">Religi</a>
+      <a href="#akomodasi" data-i18n="nav.akomodasi">Akomodasi</a>
+      <a href="#paket" data-i18n="nav.paket">Paket Wisata</a>
+      <a href="#pengalaman" data-i18n="nav.pengalaman">Pengalaman</a>
+      <a href="#kalender" data-i18n="nav.kalender">Kalender</a>
+      <a href="#ekraf" data-i18n="nav.ekraf">Ekraf</a>
+      <a href="#rencana" data-i18n="nav.rencana">Rencana</a>
+      <a href="#informasi" data-i18n="nav.informasi">Info</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Search Trigger -->
+      <button type="button" class="search-trigger" id="searchTrigger" aria-label="Buka pencarian">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5L16.5 16.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span data-i18n="nav.search">Cari</span>
+      </button>
+
+      <!-- Notification Bell -->
+      <button type="button" class="nav-action-btn" id="notifBell" aria-label="Notifikasi & Pembaruan" title="Pusat Notifikasi">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        <span class="notif-badge-count" id="notifBadge">3</span>
+      </button>
+
+      <!-- Mobile Menu Trigger -->
+      <button type="button" class="menu-trigger" id="menuTrigger" aria-label="Buka menu navigasi" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#destinasi" data-i18n="nav.destinasi">Destinasi</a>
+    <a href="#religi" data-i18n="nav.religi">Wisata Religi</a>
+    <a href="#akomodasi" data-i18n="nav.akomodasi">Akomodasi</a>
+    <a href="#paket" data-i18n="nav.paket">Paket Wisata</a>
+    <a href="#pengalaman" data-i18n="nav.pengalaman">Pengalaman Autentik</a>
+    <a href="#kalender" data-i18n="nav.kalender">Kalender Event</a>
+    <a href="#ekraf" data-i18n="nav.ekraf">Produk Ekraf</a>
+    <a href="#rencana" data-i18n="nav.rencana">Rencana Trip</a>
+    <a href="#informasi" data-i18n="nav.informasi">Informasi Praktis</a>
+    <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--line); display:flex; gap:8px;">
+      <button type="button" class="btn btn-primary btn-block" id="mobileAskBadak">🦏 Tanya Si Badak AI</button>
+    </div>
+  </div>
+</header>
+
+<!-- Notification Dropdown -->
+<div class="notif-dropdown" id="notifDropdown" aria-label="Daftar Notifikasi">
+  <div class="notif-header">
+    <h4 data-i18n="notif.title">Pusat Notifikasi &amp; Pembaruan</h4>
+    <button type="button" class="a11y-btn" id="notifClose">✕</button>
+  </div>
+  <div class="notif-list" id="notifList"></div>
+  <div class="notif-footer">
+    <button type="button" class="btn btn-outline-dark btn-block" id="enablePushBtn" data-i18n="notif.enablePush">🔔 Aktifkan Notifikasi Browser</button>
+  </div>
+</div>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-inner">
+    <div class="search-box">
+      <svg width="22" height="22" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5L16.5 16.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Cari destinasi, religi, akomodasi, paket, event, kuliner..." autocomplete="off">
+      <button type="button" id="searchClose" aria-label="Tutup pencarian">✕</button>
+    </div>
+    <div class="search-suggest">
+      <span>Rekomendasi pencarian:</span>
+      <button type="button" class="chip" data-search="ujung kulon">Ujung Kulon</button>
+      <button type="button" class="chip" data-search="masjid agung">Wisata Religi</button>
+      <button type="button" class="chip" data-search="baduy">Budaya Baduy</button>
+      <button type="button" class="chip" data-search="anyer">Pantai Anyer</button>
+      <button type="button" class="chip" data-search="sate bandeng">Kuliner Khas</button>
+      <button type="button" class="chip" data-search="batik">Batik Banten</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="top">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide is-active" style="background-image:url('assets/img/1000407444.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/1000407443.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/1000407432.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/1000407446.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/1000407448.jpg')"></div>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow-mono">
+      <span class="beacon-dot" aria-hidden="true"></span>
+      <span data-i18n="hero.eyebrow">MERCUSUAR CIKONENG, ANYER — TITIK NOL JALAN RAYA POS</span>
+    </p>
+    <h1 class="hero-title">
+      <span data-i18n="hero.title1">Ujung Barat</span><br>
+      <em data-i18n="hero.title2">Nusantara,</em><br>
+      <span data-i18n="hero.title3">Menyala Saat Senja.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">Dari rimba konservasi Badak Jawa di Ujung Kulon, kearifan suci Suku Baduy, hingga menara bersejarah Kesultanan Banten — satu provinsi dengan pesona laut, rimba, budaya, dan spiritualitas tak ternilai.</p>
+
+    <form class="hero-search" id="heroSearchForm" role="search">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5L16.5 16.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="heroSearchInput" data-i18n-placeholder="hero.searchPlaceholder" placeholder='Mau ke mana? Coba "Ujung Kulon", "Baduy", "Pantai Anyer"…'>
+      <button type="submit" data-i18n="hero.searchBtn">Cari Wisata</button>
+    </form>
+
+    <div class="hero-ctas">
+      <a href="#destinasi" class="btn btn-primary" data-i18n="hero.cta1">Jelajahi Destinasi</a>
+      <button type="button" class="btn btn-ghost" id="heroAskBadak" data-i18n="hero.cta2">Tanya Si Badak AI 🦏</button>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="heroDots"></div>
+
+  <button type="button" class="scroll-cue" id="scrollCue" aria-label="Gulir ke bawah">
+    <span data-i18n="hero.scroll">Gulir</span>
+    <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><rect x="1" y="1" width="12" height="20" rx="6" stroke="currentColor" stroke-width="1.2"/><circle class="scroll-dot" cx="7" cy="7" r="1.6" fill="currentColor"/></svg>
+  </button>
+</section>
+
+<!-- Ticker Bar -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>TAMAN NASIONAL UJUNG KULON · 06°45'S 105°20'E</span><span class="ticker-sep">◆</span>
+    <span>TANJUNG LESUNG KEK PARIWISATA · 06°30'S 105°38'E</span><span class="ticker-sep">◆</span>
+    <span>PULAU SANGIANG BAHARI · 05°55'S 105°49'E</span><span class="ticker-sep">◆</span>
+    <span>BANTEN LAMA &amp; KERATON SUROSOWAN · 06°02'S 106°09'E</span><span class="ticker-sep">◆</span>
+    <span>KAMPUNG ADAT KANEKES BADUY · 06°32'S 106°22'E</span><span class="ticker-sep">◆</span>
+    <span>MERCUSUAR CIKONENG ANYER · 06°02'S 105°53'E</span><span class="ticker-sep">◆</span>
+    <span>PANTAI SAWARNA LEBAK · 06°59'S 106°18'E</span><span class="ticker-sep">◆</span>
+  </div>
+</div>
+
+<!-- Live Coastal & Weather Bar -->
+<div class="weather-bar">
+  <div class="weather-inner">
+    <div class="weather-card">
+      <div class="weather-loc">
+        <h5>🌊 Pantai Anyer &amp; Carita</h5>
+        <span>Selat Sunda · Ombak 0.6m · Cerah</span>
+      </div>
+      <div class="weather-temp">29°C</div>
+    </div>
+    <div class="weather-card">
+      <div class="weather-loc">
+        <h5>🦏 TN Ujung Kulon &amp; Peucang</h5>
+        <span>Laut Selatan · Ombak Tenang · Cerah</span>
+      </div>
+      <div class="weather-temp">28°C</div>
+    </div>
+    <div class="weather-card">
+      <div class="weather-loc">
+        <h5>🕌 Banten Lama &amp; Kota Serang</h5>
+        <span>Pusat Ziarah · Angin Sepoi · Cerah Berawan</span>
+      </div>
+      <div class="weather-temp">31°C</div>
+    </div>
+    <div class="weather-card">
+      <div class="weather-loc">
+        <h5>🌿 Adat Baduy (Kanekes, Lebak)</h5>
+        <span>Hutan Pegunungan · Sejuk Asri</span>
+      </div>
+      <div class="weather-temp">24°C</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DESTINASI ============ -->
+<section class="section section-destinasi" id="destinasi">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="dest.eyebrow">PETA SINGGAH UTAMA</p>
+      <h2 class="section-title" data-i18n="dest.title">Destinasi Unggulan Banten</h2>
+      <p class="section-lede" data-i18n="dest.lede">Enam titik ikonik yang mendefinisikan Banten: rimba perawan Ujung Kulon, laut bergradasi di Sangiang, dan peninggalan megah kesultanan maritim abad ke-16.</p>
+    </div>
+    <div class="rail-controls">
+      <button type="button" class="rail-arrow" data-rail="destRail" data-dir="-1" aria-label="Sebelumnya">←</button>
+      <button type="button" class="rail-arrow" data-rail="destRail" data-dir="1" aria-label="Berikutnya">→</button>
+    </div>
+  </div>
+  <div class="dest-rail" id="destRail"></div>
+</section>
+
+<!-- ============ WISATA RELIGI ============ -->
+<section class="section section-religi" id="religi">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="religi.eyebrow">JEJAK SPIRITUAL &amp; SEJARAH</p>
+      <h2 class="section-title" data-i18n="religi.title">Wisata Religi &amp; Warisan Kesultanan</h2>
+      <p class="section-lede" data-i18n="religi.lede">Menyusuri napak tilas dakwah para Sultan Banten, menara kuno bergaya pagoda, dan simbol akulturasi lintas iman yang abadi.</p>
+    </div>
+    <div class="grid-cards" id="religiGrid"></div>
+  </div>
+</section>
+
+<!-- ============ AKOMODASI ============ -->
+<section class="section section-akomodasi" id="akomodasi">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="stay.eyebrow">TEMPAT BERISTIRAHAT</p>
+      <h2 class="section-title" data-i18n="stay.title">Akomodasi &amp; Resor Pilihan</h2>
+      <p class="section-lede" data-i18n="stay.lede">Dari resor tepi pantai Selat Sunda hingga glamping sejuk di kaki pegunungan Pandeglang.</p>
+    </div>
+    <div class="grid-cards grid-cards--stay" id="akomodasiGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PAKET WISATA ============ -->
+<section class="section section-paket" id="paket">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="paket.eyebrow">PERJALANAN SIAP NIKMATI</p>
+      <h2 class="section-title" data-i18n="paket.title">Paket Wisata Eksklusif</h2>
+      <p class="section-lede" data-i18n="paket.lede">Dikelola bersama pemandu lokal resmi dan komunitas warga adat untuk pengalaman yang berkesan dan aman.</p>
+    </div>
+    <div class="grid-cards grid-cards--paket" id="paketGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PENGALAMAN ============ -->
+<section class="section section-pengalaman" id="pengalaman">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="exp.eyebrow">EMPAT LAPISAN PESONA</p>
+      <h2 class="section-title" data-i18n="exp.title">Pengalaman Autentik Banten</h2>
+      <p class="section-lede" data-i18n="exp.lede">Banten tidak hanya dilihat, namun dirasakan melalui harmoni alam liar, kearifan adat, kelezatan rempah, dan keramahan masyarakatnya.</p>
+    </div>
+
+    <div class="tab-controls" role="tablist" aria-label="Kategori pengalaman">
+      <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="alam" data-i18n="exp.tab.alam"><span class="tab-num">01</span>🌿 Alam Liar</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="budaya" data-i18n="exp.tab.budaya"><span class="tab-num">02</span>🏮 Adat &amp; Budaya</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="kuliner" data-i18n="exp.tab.kuliner"><span class="tab-num">03</span>🍲 Kuliner Rempah</button>
+    </div>
+
+    <div class="tab-panel is-active" data-panel="alam">
+      <div class="panel-grid">
+        <div class="panel-feature">
+          <div class="panel-feature-img" style="background-image:url('assets/img/1000407443.jpg')"></div>
+          <div class="panel-feature-text">
+            <h3>Berkemah di tepi hutan hujan Pulau Peucang, Ujung Kulon</h3>
+            <p>Di dalam kawasan Taman Nasional Ujung Kulon, situs warisan dunia UNESCO ini menyatukan hutan hujan dataran rendah terakhir di Jawa dengan laguna sebening kaca dan habitat badak Jawa.</p>
+            <ul class="panel-meta">
+              <li><strong>Durasi ideal</strong><span>2–3 hari</span></li>
+              <li><strong>Akses Utama</strong><span>Perahu dari Sumur / Taman Jaya</span></li>
+              <li><strong>Musim Terbaik</strong><span>Mei – Oktober</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-side">
+          <div class="side-card" style="background-image:url('assets/img/1000407439.jpg')">
+            <div class="side-card-text"><h4>Bendungan &amp; Perbukitan Lebak</h4><p>Waduk alami di kaki pegunungan selatan.</p></div>
+          </div>
+          <div class="side-card" style="background-image:url('assets/img/1000407433.jpg')">
+            <div class="side-card-text"><h4>Snorkeling Terumbu Karang Sangiang</h4><p>Terumbu karang dangkal warna-warni di Selat Sunda.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="budaya">
+      <div class="panel-grid">
+        <div class="panel-feature">
+          <div class="panel-feature-img" style="background-image:url('assets/img/1000407448.jpg')"></div>
+          <div class="panel-feature-text">
+            <h3>Angklung Buhun &amp; Tenun Gedogan Kanekes Baduy</h3>
+            <p>Berbeda dari angklung biasa, Angklung Buhun dimainkan secara sakral saat masa tanam dan panen padi. Dipadukan dengan keahlian menenun kain tradisional wanita Baduy.</p>
+            <ul class="panel-meta">
+              <li><strong>Lokasi</strong><span>Kanekes &amp; Kasepuhan Citorek</span></li>
+              <li><strong>Masa Sakral</strong><span>Upacara Seba Baduy (April)</span></li>
+              <li><strong>Etika Adat</strong><span>Wajib didampingi pemandu lokal</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-side">
+          <div class="side-card" style="background-image:url('assets/img/1000407440.jpg')">
+            <div class="side-card-text"><h4>Rampak Bedug Kolosal</h4><p>Ratusan bedug ditabuh serentak dalam harmoni seni silat dan religi.</p></div>
+          </div>
+          <div class="side-card" style="background-image:url('assets/img/1000407436.jpg')">
+            <div class="side-card-text"><h4>Terbang Gede &amp; Debus Pusaka</h4><p>Kesenian bela diri dan spiritualitas legendaris Banten.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="kuliner">
+      <div class="panel-grid">
+        <div class="panel-feature">
+          <div class="panel-feature-img" style="background-image:url('assets/img/1000407430.jpg')"></div>
+          <div class="panel-feature-text">
+            <h3>Kue Balok Menes — Kuliner Legendaris Pandeglang</h3>
+            <p>Adonan olahan beras yang difermentasi, dikukus dalam cetakan bambu tradisional, lalu disiram kinca gula aren murni khas Menes yang legit.</p>
+            <ul class="panel-meta">
+              <li><strong>Pusat Kuliner</strong><span>Pasar Menes, Pandeglang</span></li>
+              <li><strong>Waktu Terbaik</strong><span>Pagi hari selagi hangat</span></li>
+              <li><strong>Wajib Coba</strong><span>Rabeg Banten &amp; Sate Bandeng</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-side">
+          <div class="side-card side-card--text-only">
+            <div class="side-card-text"><h4>Sate Bandeng Tanpa Duri</h4><p>Ikan bandeng segar yang diolah bersama rempah dan kelapa sangrai, dibakar dalam jepitan bambu — warisan istana Sultan Banten.</p></div>
+          </div>
+          <div class="side-card side-card--text-only">
+            <div class="side-card-text"><h4>Rabeg Banten</h4><p>Gulai daging kambing berempah pekat lada hitam, kayu manis, dan kecap manis warisan kesultanan maritim.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KALENDER EVENT ============ -->
+<section class="section section-kalender" id="kalender">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="event.eyebrow">AGENDA BUDAYA 2026</p>
+      <h2 class="section-title" data-i18n="event.title">Kalender Event Pariwisata</h2>
+      <p class="section-lede" data-i18n="event.lede">Rayakan festival tahunan pesisir Anyer, tradisi sakral Seba Baduy, dan kemeriahan Rampak Bedug kolosal.</p>
+    </div>
+    <div class="event-list" id="kalenderList"></div>
+  </div>
+</section>
+
+<!-- ============ PRODUK EKRAF ============ -->
+<section class="section section-ekraf" id="ekraf">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="ekraf.eyebrow">KARYA ANAK NEGERI</p>
+      <h2 class="section-title" data-i18n="ekraf.title">Ekonomi Kreatif &amp; Kriya Khas</h2>
+      <p class="section-lede" data-i18n="ekraf.lede">Warisan pusaka Golok Ciomas, keanggunan Batik Banten ragam hias Surosowan, hingga gurihnya Emping Menes.</p>
+      <div style="margin-top:14px;">
+        <button type="button" class="btn btn-outline-dark" id="ekrafReadAll">🔊 Dengarkan Ringkasan Audio Halaman Ini</button>
+      </div>
+    </div>
+    <div class="grid-cards grid-cards--ekraf" id="ekrafGrid"></div>
+  </div>
+</section>
+
+<!-- ============ RENCANAKAN PERJALANAN ============ -->
+<section class="section section-rencana" id="rencana">
+  <div class="rencana-bg" style="background-image:url('assets/img/1000407437.jpg')"></div>
+  <div class="rencana-scrim"></div>
+  <div class="section-inner">
+    <div class="section-head section-head--light">
+      <p class="eyebrow-mono" data-i18n="plan.eyebrow">ITINERARY INTERAKTIF</p>
+      <h2 class="section-title" data-i18n="plan.title">Rencanakan Perjalanan Wisata Anda</h2>
+      <p class="section-lede" data-i18n="plan.lede">Pilih minat dan durasi liburan Anda. Sistem cerdas kami akan menyusun rute perjalanan beserta titik koordinatnya.</p>
+    </div>
+
+    <div class="planner">
+      <div class="planner-form">
+        <div class="planner-field">
+          <label data-i18n="plan.interestLabel">Minat Utama Wisata</label>
+          <div class="planner-chips" id="interestChips">
+            <button type="button" class="planner-chip is-active" data-interest="alam">🌿 Alam Liar</button>
+            <button type="button" class="planner-chip" data-interest="budaya">🏮 Budaya &amp; Adat</button>
+            <button type="button" class="planner-chip" data-interest="bahari">🌊 Bahari &amp; Pantai</button>
+            <button type="button" class="planner-chip" data-interest="religi">🕌 Ziarah Religi</button>
+          </div>
+        </div>
+        <div class="planner-field">
+          <label for="durasiSelect" data-i18n="plan.durationLabel">Durasi Liburan</label>
+          <select id="durasiSelect">
+            <option value="1">1 Hari (Day Trip)</option>
+            <option value="2" selected>2 Hari 1 Malam (Weekend)</option>
+            <option value="3">3 Hari 2 Malam (Liburan Lengkap)</option>
+            <option value="4">4–5 Hari (Ekspedisi Seluruh Banten)</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" id="planBtn" data-i18n="plan.btn">Buat Rekomendasi Rute</button>
+      </div>
+      <div class="planner-result" id="plannerResult" aria-live="polite">
+        <p class="planner-placeholder" data-i18n="plan.placeholder">Rute akan muncul di sini — lengkap dengan titik-titik koordinat singgah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFORMASI PRAKTIS ============ -->
+<section class="section section-informasi" id="informasi">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow-mono" data-i18n="info.eyebrow">PANDUAN PERJALANAN</p>
+      <h2 class="section-title" data-i18n="info.title">Informasi Praktis Sebelum Berangkat</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-icon">✈</span>
+        <h3 data-i18n="info.card1.title">Akses &amp; Rute Menuju Banten</h3>
+        <p data-i18n="info.card1.text">Hanya 1.5–2 jam dari Jakarta via Tol Jakarta–Merak. Akses kereta Commuter Line Tanah Abang–Rangkasbitung–Merak, atau Bandara Soekarno-Hatta Tangerang.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">☀</span>
+        <h3 data-i18n="info.card2.title">Musim &amp; Prakiraan Cuaca</h3>
+        <p data-i18n="info.card2.text">Bulan Mei–Oktober sangat ideal untuk wisata bahari Pulau Sangiang &amp; Ujung Kulon. Musim penghujan menyajikan keindahan curug dan terasering sawah yang asri.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🚌</span>
+        <h3 data-i18n="info.card3.title">Transportasi &amp; Pemandu Lokal</h3>
+        <p data-i18n="info.card3.text">Gunakan pemandu wisata bersertifikat HPI untuk pendakian dan ekspedisi Ujung Kulon. Menuju Baduy Dalam wajib jalan kaki dari terminal Ciboleger.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🌿</span>
+        <h3 data-i18n="info.card4.title">Aturan &amp; Etika Adat</h3>
+        <p data-i18n="info.card4.text">Hormati pantangan adat di Baduy Dalam: tanpa kamera/gadget, dilarang sabun/sampo kimiawi di sungai, dan patuhi arahan tetua adat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/logo_ebe_small.png" alt="Logo Exciting Banten" class="footer-logo">
+        <p id="footerTagline" data-i18n="footer.tagline">Dinas Pariwisata Provinsi Banten — Memajukan pariwisata berkelanjutan, melestarikan warisan budaya leluhur, dan memancarkan pesona Banten ke panggung dunia.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5 data-i18n="footer.col1.title">Eksplorasi Banten</h5>
+          <a href="#destinasi" data-i18n="nav.destinasi">Destinasi</a>
+          <a href="#religi" data-i18n="nav.religi">Wisata Religi</a>
+          <a href="#akomodasi" data-i18n="nav.akomodasi">Akomodasi</a>
+          <a href="#paket" data-i18n="nav.paket">Paket Wisata</a>
+          <a href="#kalender" data-i18n="nav.kalender">Kalender Event</a>
+          <a href="#ekraf" data-i18n="nav.ekraf">Produk Ekraf</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col2.title">Informasi Instansi</h5>
+          <a href="#">Profil Dinas Pariwisata</a>
+          <a href="#">Layanan PPID</a>
+          <a href="#">Akuntabilitas Kinerja (SAKIP)</a>
+          <a href="#">Pendaftaran Usaha (TDUP)</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col3.title">Kontak &amp; Layanan</h5>
+          <a href="#">KP3B, Kota Serang, Banten</a>
+          <a href="mailto:dispar@bantenprov.go.id">dispar@bantenprov.go.id</a>
+          <a href="tel:+62254200000">+62 254 200 000</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 Dinas Pariwisata Provinsi Banten. Exciting Banten — Wonderful Indonesia.</span>
+      <span class="coord-tag small">06°02'S 105°53'E</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SI BADAK — FLOATING SMART AI ASSISTANT ============ -->
+<button type="button" class="badak-fab" id="badakFab" aria-label="Buka Asisten AI Si Badak">
+  <span class="badak-fab-icon">
+    <svg viewBox="0 0 100 100" width="28" height="28" aria-hidden="true"><use href="#rhinoIcon"/></svg>
+  </span>
+  <span class="badak-fab-text">Tanya<br>Si Badak AI</span>
+  <span class="beacon-dot badak-fab-dot" aria-hidden="true"></span>
+</button>
+
+<div class="badak-overlay" id="badakOverlay"></div>
+
+<aside class="badak-panel" id="badakPanel" aria-label="Si Badak Asisten AI Banten">
+  <!-- Header -->
+  <div class="badak-head">
+    <div class="badak-head-info">
+      <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><use href="#rhinoIcon"/></svg>
+      <div class="badak-head-text">
+        <strong data-i18n="badak.title">Si Badak — Asisten Wisata AI Banten</strong>
+        <span class="beacon-status"><span class="beacon-dot"></span> <span data-i18n="badak.status">Sistem Aktif &amp; Terhubung ke Gemini 3.7</span></span>
+      </div>
+    </div>
+    <div class="badak-head-actions">
+      <button type="button" class="badak-head-btn" id="badakHistoryToggle" title="Riwayat Obrolan">📜</button>
+      <button type="button" class="badak-head-btn" id="badakNewChat" title="Obrolan Baru">➕</button>
+      <button type="button" class="badak-head-btn" id="badakClose" aria-label="Tutup Asisten">✕</button>
+    </div>
+  </div>
+
+  <!-- History Drawer -->
+  <div class="badak-history-drawer" id="badakHistoryDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--line); padding-bottom:8px;">
+      <strong data-i18n="badak.history">Riwayat Percakapan</strong>
+      <button type="button" class="a11y-btn" id="badakHistoryClose">✕</button>
+    </div>
+    <div class="badak-history-list" id="badakHistoryList"></div>
+    <button type="button" class="btn btn-outline-dark btn-block" id="badakClearHistoryBtn" data-i18n="badak.clearHistory">Hapus Semua Riwayat</button>
+  </div>
+
+  <!-- Messages Container -->
+  <div class="badak-messages" id="badakMessages">
+    <div class="msg msg--badak">
+      <p data-i18n="badak.greet">Sampurasun! Halo, saya <strong>Si Badak</strong>, asisten AI cerdas Dinas Pariwisata Provinsi Banten. Mau liburan ke mana? Tanyakan rute Ujung Kulon, kearifan Baduy, kuliner Rabeg &amp; Sate Bandeng, atau rekomendasi hotel pantai!</p>
+    </div>
+  </div>
+
+  <!-- Suggestion Chips -->
+  <div class="badak-suggest" id="badakSuggestChips">
+    <button type="button" class="chip" data-ask="Rekomendasikan itinerary 3 hari ke Ujung Kulon dan Pulau Peucang" data-i18n="badak.suggest1">Rute 3D2N Ujung Kulon</button>
+    <button type="button" class="chip" data-ask="Bagaimana sejarah dan aturan ziarah ke Masjid Agung Banten Lama?" data-i18n="badak.suggest2">Aturan Ziarah Banten Lama</button>
+    <button type="button" class="chip" data-ask="Apa saja pantangan adat dan aturan berkunjung ke Suku Baduy Dalam?" data-i18n="badak.suggest3">Pantangan Adat Baduy</button>
+    <button type="button" class="chip" data-ask="Apa saja kuliner khas Banten yang wajib dicoba beserta lokasinya?" data-i18n="badak.suggest4">Kuliner Khas Wajib Coba</button>
+  </div>
+
+  <!-- Input Bar -->
+  <form class="badak-input" id="badakForm">
+    <input type="text" id="badakInput" data-i18n-placeholder="badak.placeholder" placeholder="Ketik pertanyaan wisata Banten di sini..." autocomplete="off" aria-label="Tulis pertanyaan untuk Si Badak AI">
+    <button type="submit" aria-label="Kirim pertanyaan" data-i18n="badak.btnSend">↑</button>
+  </form>
+</aside>
+
+</div><!-- /publicSite -->
+
+<!-- ============ ADMIN LOGIN ============ -->
+<div class="admin-login" id="adminLogin" style="display:none;">
+  <div class="admin-login-box">
+    <svg viewBox="0 0 100 100" width="46" height="46" aria-hidden="true"><use href="#rhinoIcon"/></svg>
+    <h2>Portal Admin Dispar Banten</h2>
+    <p>Kelola konten website, notifikasi, menu, warna tema, dan analisis pengunjung secara real-time.</p>
+    <form id="adminLoginForm">
+      <input type="text" id="adminUsername" placeholder="Username (admin)" autocomplete="username" required>
+      <input type="password" id="adminPassword" placeholder="Kata Sandi (admin12345)" autocomplete="current-password" required>
+      <button type="submit" class="btn btn-primary">Masuk ke Dashboard</button>
+    </form>
+    <p class="admin-login-error" id="adminLoginError" hidden></p>
+    <button type="button" class="admin-back-link" id="adminLoginBack">← Kembali ke Halaman Publik</button>
+  </div>
+</div>
+
+<!-- ============ ADMIN DASHBOARD ============ -->
+<div class="admin-dash" id="adminDash" style="display:none;">
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-brand">
+      <svg viewBox="0 0 100 100" width="28" height="28" aria-hidden="true"><use href="#rhinoIcon"/></svg>
+      <span>Dispar Banten CMS</span>
+    </div>
+    <nav class="admin-nav" id="adminNav">
+      <button type="button" class="admin-nav-btn is-active" data-admin-panel="analytics">📊 Dashboard Analitik</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="hero">🌟 Header &amp; Hero Section</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="badak">🦏 Tanya Si Badak AI</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="menu">☰ Menu &amp; Tombol</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="sections">📑 Teks Seksi Halaman</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="pengaturan">⚙ Pengaturan &amp; Tema</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="footer">🦶 Footer &amp; Kontak</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="notifikasi">📢 Broadcast Notifikasi</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="destinations">📍 Destinasi Utama</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="religi">🕌 Wisata Religi</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="akomodasi">🏨 Akomodasi</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="paket">🧳 Paket Wisata</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="kalender">📅 Kalender Event</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="ekraf">🧵 Produk Ekraf</button>
+      <button type="button" class="admin-nav-btn" data-admin-panel="data">💾 Cadangan &amp; Impor Data</button>
+    </nav>
+    <button type="button" class="admin-logout" id="adminLogout">← Keluar ke Portal Publik</button>
+  </aside>
+
+  <div class="admin-content">
+    <div class="admin-toast" id="adminToast"></div>
+
+    <!-- Panel 1: Analytics -->
+    <div class="admin-panel is-active" data-panel="analytics" id="panelAnalytics"></div>
+
+    <!-- Panel: Hero Section -->
+    <div class="admin-panel" data-panel="hero" id="panelHero"></div>
+
+    <!-- Panel: Si Badak AI -->
+    <div class="admin-panel" data-panel="badak" id="panelBadak"></div>
+
+    <!-- Panel: Menu & Buttons -->
+    <div class="admin-panel" data-panel="menu" id="panelMenu"></div>
+
+    <!-- Panel: Sections Headings -->
+    <div class="admin-panel" data-panel="sections" id="panelSections"></div>
+
+    <!-- Panel: Pengaturan & Tema -->
+    <div class="admin-panel" data-panel="pengaturan" id="panelPengaturan"></div>
+
+    <!-- Panel: Footer -->
+    <div class="admin-panel" data-panel="footer" id="panelFooter"></div>
+
+    <!-- Panel: Notifikasi Broadcast -->
+    <div class="admin-panel" data-panel="notifikasi" id="panelNotifikasi"></div>
+
+    <!-- Content CRUD Panels -->
+    <div class="admin-panel" data-panel="destinations" id="panelDestinations"></div>
+    <div class="admin-panel" data-panel="religi" id="panelReligi"></div>
+    <div class="admin-panel" data-panel="akomodasi" id="panelAkomodasi"></div>
+    <div class="admin-panel" data-panel="paket" id="panelPaket"></div>
+    <div class="admin-panel" data-panel="kalender" id="panelKalender"></div>
+    <div class="admin-panel" data-panel="ekraf" id="panelEkraf"></div>
+
+    <!-- Data Export/Import -->
+    <div class="admin-panel" data-panel="data" id="panelData"></div>
+  </div>
+</div>
+
+<!-- ============ SHARED SVG SYMBOLS ============ -->
+<svg width="0" height="0" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <linearGradient id="badakGoldGrad" x1="0%" y1="100%" x2="40%" y2="0%">
+      <stop offset="0%" stop-color="#C2410C"/>
+      <stop offset="45%" stop-color="#F59E0B"/>
+      <stop offset="90%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="badakSkinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A52"/>
+      <stop offset="60%" stop-color="#0F2436"/>
+      <stop offset="100%" stop-color="#081420"/>
+    </linearGradient>
+    <linearGradient id="badakArmorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2672E"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+
+    <!-- LOGO BADAK BERCULA SATU (RHINOCEROS SONDAICUS / JAVAN RHINO) -->
+    <symbol id="rhinoIcon" viewBox="0 0 100 100">
+      <!-- Shield / Crest Round Badge Base -->
+      <circle cx="50" cy="50" r="46" fill="#0B1E2D" stroke="#F59E0B" stroke-width="2.5"/>
+      <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="3,2"/>
+      
+      <!-- Back Neck Armor Fold (Dermal Armor Plate) -->
+      <path d="M64 32 C74 36 84 46 84 62 C84 72 79 80 72 84 C66 84 64 78 66 70 C68 62 65 50 60 42 Z" fill="url(#badakArmorGrad)" opacity="0.95"/>
+      
+      <!-- Middle Armor Ridge -->
+      <path d="M54 36 C64 42 71 52 72 66 C73 75 69 82 63 84 C58 82 56 74 58 66 C60 56 57 46 51 40 Z" fill="#243D54" stroke="#F59E0B" stroke-width="1"/>
+
+      <!-- Head Base & Jowl Contour -->
+      <path d="M28 62 C22 60 18 54 20 48 C22 43 27 42 32 42 C34 42 37 39 41 33 C45 28 51 26 61 26 C63 26 65 24 65 20 C65 16 68 14 72 16 C76 18 77 24 73 29 C71 32 67 34 66 38 C65 46 63 60 57 68 C51 74 41 74 33 70 C29 68 27 64 28 62 Z" fill="url(#badakSkinGrad)" stroke="#38BDF8" stroke-width="0.8"/>
+
+      <!-- CULA SATU (Prominent Single Horn on Snout) -->
+      <!-- Curves forward and upward into a sharp point -->
+      <path d="M29 44 C28 39 25 30 20 20 C17 14 13 8 11 4 C17 9 26 21 34 30 C37 34 38 39 37 43 Z" fill="url(#badakGoldGrad)" stroke="#B45309" stroke-width="0.8"/>
+      <!-- Horn Gleam / Sharp Apex Highlight -->
+      <path d="M11 4 C15 12 23 24 30 34 C33 38 35 42 35 43" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+
+      <!-- Facial Armor Folds & Expressions -->
+      <path d="M41 33 C45 40 47 50 45 60" fill="none" stroke="#E2672E" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M51 30 C55 38 57 50 55 63" fill="none" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+      <path d="M32 43 C37 46 39 52 37 58" fill="none" stroke="#F59E0B" stroke-width="1.4" stroke-linecap="round"/>
+
+      <!-- Eye (Almond, Focused with Gold Iris & White Specular) -->
+      <ellipse cx="47" cy="36" rx="4.5" ry="3.2" transform="rotate(-10 47 36)" fill="#081420"/>
+      <circle cx="47" cy="36" r="2.8" fill="#F59E0B"/>
+      <circle cx="47" cy="36" r="1.6" fill="#081420"/>
+      <circle cx="46" cy="35" r="0.9" fill="#FFFFFF"/>
+
+      <!-- Brow Arch -->
+      <path d="M42 32 C45 30 50 30 53 32" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Nostril -->
+      <ellipse cx="24" cy="52" rx="2.4" ry="1.5" transform="rotate(-15 24 52)" fill="#081420" stroke="#F59E0B" stroke-width="0.8"/>
+
+      <!-- Prehensile Lip / Muzzle -->
+      <path d="M20 56 C22 58 26 59 30 58" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- Ear Inner Ridge -->
+      <path d="M67 21 C70 20 72 22 70 25" fill="none" stroke="#E2672E" stroke-width="1.6" stroke-linecap="round"/>
+
+      <!-- Armor Neck Arc -->
+      <path d="M38 71 C44 74 52 73 58 68" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
